@@ -1,7 +1,16 @@
 # dotfiles
 my development environment set up files
 
-- .bashrc / .zshrc
+> What these dotfiles are?
+> In unix world, most programs are configured command line and they save their configurations in homedir usually a file which names start with a dot. Thus dotfiles.
+> from https://abdullah.today/encrypted-dotfiles/
+
+- .bashrc
+- .zshrc
 - .vimrc
 
-[vim 에디터 개발환경](https://edward0im.github.io/technology/2020/09/17/vim/)
+
+
+### 참고
+- [dotfiles](https://dotfiles.github.io/)
+- [alrra/dotfiles](https://github.com/alrra/dotfiles)
