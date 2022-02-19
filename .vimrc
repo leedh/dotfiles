@@ -146,6 +146,8 @@ endif
 " Add a bit extra margin to the left
 set foldcolumn=1
 
+" for blueyed/vim-diminactive
+let g:diminactive_enable_focus = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -159,7 +161,8 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-    colorscheme desert
+    " colorscheme desert
+    colorscheme jellybeans
 catch
 endtry
 
@@ -179,6 +182,8 @@ set encoding=utf8
 " Use Unix as the standard file type
 set ffs=unix,dos,mac
 
+" highlight comment
+highlight Comment term=bold cterm=bold ctermfg=4
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -209,6 +214,13 @@ set tw=500
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
+
+" for indent guide
+let g:indentguides_spacechar = '┆'
+let g:indentguides_tabchar = '|'
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level=2
+let g:indent_guides_guide_size=1
 
 
 """"""""""""""""""""""""""""""
@@ -275,6 +287,8 @@ endtry
 " Return to last edit position when opening files (You want this!)
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
+" Enable mouse cursor
+set mouse=a
 
 """"""""""""""""""""""""""""""
 " => Status line
@@ -285,10 +299,20 @@ set laststatus=2
 " Format the status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 
+" for vim-airline
+let g:airline#extensions#tabline#enabled = 1 " turn on buffer list
+let g:airline_theme='hybrid'
+set laststatus=2 " turn on bottom bar
+let mapleader = ","
+nnoremap <leader>q :bp<CR>
+nnoremap <leader>w :bn<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Editing mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" for taglist
+nmap <F8> :Tagbar<CR>
+
 " Remap VIM 0 to first non-blank character
 map 0 ^
 
