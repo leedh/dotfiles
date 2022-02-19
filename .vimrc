@@ -149,6 +149,13 @@ set foldcolumn=1
 " for blueyed/vim-diminactive
 let g:diminactive_enable_focus = 1
 
+" highlight cursor line in the current window
+augroup CursorLine
+        au!
+        au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+        au WinLeave * setlocal nocursorline
+augroup END
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -222,6 +229,8 @@ let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_start_level=2
 let g:indent_guides_guide_size=1
 
+" turn off auto indenting for the pasted text(or code)
+set paste
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
