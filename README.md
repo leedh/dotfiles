@@ -9,10 +9,22 @@ my development environment set up files
 
 
 ## Contents
-- .bashrc
 - .zshrc
 - .vimrc
 - .gitconfig
+
+### .zshrc
+#### theme
+- ['cloud_custome'](https://medium.com/dolomite-official/supercharge-your-productivity-with-iterm2-zsh-a1fbc7607cd6)
+
+#### zsh plugins
+- ['zsh-syntax-highlighting'](https://github.com/zsh-users/zsh-syntax-highlighting)
+- ['zsh-autosuggestions'](https://github.com/zsh-users/zsh-autosuggestions)
+- ['alias-tips'](https://github.com/djui/alias-tips)
+- ['fzf'](https://github.com/junegunn/fzf)
+- ['fasd'](https://github.com/clvv/fasd)
+- ['asdf'](https://asdf-vm.com/)
+- ['tmux'](https://github.com/tmux/tmux)
 
 ### .vimrc
 
